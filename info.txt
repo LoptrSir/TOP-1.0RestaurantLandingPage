@@ -1,0 +1,4 @@
+Restaurant Landing Page project for The Odin Project
+11/2/2023
+
+11/2 1536 Commit: created basic files.
