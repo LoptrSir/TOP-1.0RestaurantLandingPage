@@ -1,0 +1,5 @@
+Restaurant Landing Page project for The Odin Project
+
+11/7 1258 Commit: a basic launch page with two sub pages. can navigate to, between, and from them. spent a lot of time working with webpack to get things to play nice.  For a first time its a matter of understanding the details.  Everything is coming into focus one step at a time.
+11/2/2023
+11/2 1536 Commit: created basic files.
