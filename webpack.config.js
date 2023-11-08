@@ -17,7 +17,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "home",
-      template: "./src/index.html",
+      // filename: 'home/index.html',
+      template: "src/home/index.html",
       chunks: ["home"],
     }),
     new HtmlWebpackPlugin({
@@ -33,17 +34,45 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "src/style.css",
-          to: "style.css",
+          from: "src/menu",
+          to: 'menu',
+        },
+        {
+          from: "src/contact",
+          to: 'contact',
+        },
+        {
+          from: "src/home",
+          to: 'home',
         },
         {
           from: "src/module.js",
           to: "module.js",
-        },
-        {
-            from: "src/script.js",
-            to: "script.js"
-        }
+          },
+        // {
+        //   from: "src/menu/script.js",
+        //   to: 'menu',
+        // },
+        // {
+        // from: "src/contact/script.js",
+        // to: 'contact',
+        // },
+      // {
+      // from: "src/home/script.js",
+      // to: 'home',
+      // },
+        // {
+        //   from: "src/style.css",
+        //   to: "style.css",
+        // },
+        // {
+        //   from: "src/module.js",
+        //   to: "module.js",
+        // },
+        // {
+        //     from: "src/script.js",
+        //     to: "script.js"
+        // }
       ],
     }),
   ],

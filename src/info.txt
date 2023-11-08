@@ -1,5 +1,7 @@
 Restaurant Landing Page project for The Odin Project
 
+11/8 1513 Commit: module now creates header div and home/menu/contact links. They all function in live-server.  webpack has an issue with dist. dist/home/index.html and dist/index.html exist. dist.index.html has the proper bundle.js data built in, this needs to be in the home file.
+0957 Created branch2.0
 11/7 1721 Commit: changed footer to a module, it works on each page.
 1258 Commit: a basic launch page with two sub pages. can navigate to, between, and from them. spent a lot of time working with webpack to get things to play nice.  For a first time its a matter of understanding the details.  Everything is coming into focus one step at a time.
 11/2/2023
