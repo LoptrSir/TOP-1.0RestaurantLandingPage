@@ -36,10 +36,14 @@ module.exports = {
           from: "src/style.css",
           to: "style.css",
         },
-        // {
-        //     from: "src/script.js",
-        //     to: "script.js"
-        // }
+        {
+          from: "src/module.js",
+          to: "module.js",
+        },
+        {
+            from: "src/script.js",
+            to: "script.js"
+        }
       ],
     }),
   ],
