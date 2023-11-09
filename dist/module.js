@@ -15,9 +15,9 @@ export const myFooter = () => {
 
 export function createTabs() {
 const tabsData = [
-    { name: 'Home', url: './home/index.html'},
-    { name: 'Menu', url: './menu/index.html'},
-    { name: 'Contact', url: './contact/index.html'},
+    { name: 'Home', url: '../index.html'},  // live-server mod './<folders>.html'
+    { name: 'Menu', url: '../menu/index.html'},
+    { name: 'Contact', url: '../contact/index.html'},
 ];
 
 const headerDiv = document.createElement('div');

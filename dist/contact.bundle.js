@@ -14,7 +14,7 @@
   \************************/
 /***/ (() => {
 
-eval("// import './style.css';\n\nconsole.log('contact.js file created');\n\n//# sourceURL=webpack://restaurant-landing-page/./src/contact.js?");
+eval("\n\nconsole.log('contact.js file created');\n\n//# sourceURL=webpack://restaurant-landing-page/./src/contact.js?");
 
 /***/ })
 

@@ -14,7 +14,7 @@
   \*********************/
 /***/ (() => {
 
-eval("// import './style.css';\n\nconsole.log('home.js file created');\n\n//# sourceURL=webpack://restaurant-landing-page/./src/home.js?");
+eval("\n\nconsole.log('home.js file created');\n\n//# sourceURL=webpack://restaurant-landing-page/./src/home.js?");
 
 /***/ })
 
