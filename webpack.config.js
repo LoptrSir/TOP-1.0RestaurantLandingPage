@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "home",
-      filename: 'index.html',
+      filename: "index.html",
       template: "src/index.html",
       chunks: ["home"],
     }),
@@ -35,44 +35,26 @@ module.exports = {
       patterns: [
         {
           from: "src/menu",
-          to: 'menu',
+          to: "menu",
         },
         {
           from: "src/contact",
-          to: 'contact',
+          to: "contact",
         },
-        // {
-        //   from: "src/home",
-        //   to: 'home',
-        // },
-        // {
-        //   from: "src/module.js",
-        //   to: "module.js",
-        //   },
-        // {
-        //   from: "src/menu/script.js",
-        //   to: 'menu',
-        // },
-        // {
-        // from: "src/contact/script.js",
-        // to: 'contact',
-        // },
-      // {
-      // from: "src/home/script.js",
-      // to: 'home',
-      // },
-        // {
-        //   from: "src/style.css",
-        //   to: "style.css",
-        // },
+        { from: "src/images", 
+        to: "images" },
+        {
+          from: "src/style.css",
+          to: "style.css",
+        },
         {
           from: "src/module.js",
           to: "module.js",
         },
         {
-            from: "src/script.js",
-            to: "script.js"
-        }
+          from: "src/script.js",
+          to: "script.js",
+        },
       ],
     }),
   ],

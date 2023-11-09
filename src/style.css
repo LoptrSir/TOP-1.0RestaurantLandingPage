@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 
+/* .body {
+    height:100vh;
+} */
 
 .content {
     height: 100vh;
     display: grid;
     grid-template-rows: 15vh repeat(3, 25vh) 5vh;
     grid-template-columns: repeat(3, 30vh);
-    background-image: url('../images/tacoPlate2.jpg');
+    background-image: url('./images/tacosSign1.jpeg');
     color: aliceblue;
     background-size: contain;
     /* Ensure the image maintains its aspect ratio */

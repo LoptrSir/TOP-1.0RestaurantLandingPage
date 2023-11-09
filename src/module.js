@@ -31,3 +31,13 @@ tabsData.forEach(tabInfo => {
 })
 return headerDiv;
 };
+
+export const imagePaths = [
+'src/images/tacosSign.jpeg',
+'src/images/streetGrill.jpg',
+'src/images/tacoAssembly.jpg',
+'src/images/tacocat.jpg',
+'src/images/tacoPlate.jpg',
+'src/images/tacoPlate2.jpg',
+];
+
