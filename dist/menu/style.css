@@ -1,2 +1,32 @@
-/* @import "normalize.css"; */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15vh repeat(3, 25vh) 5vh;
+    grid-template-columns: repeat(3, 30vh);
+    background-image: url('../images/tacoPlate2.jpg');
+    color: aliceblue;
+    background-size: contain;
+    /* Ensure the image maintains its aspect ratio */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center center;
+    /* Center the image both horizontally and vertically */
+    background-color: black;
+}
+
+.header {
+    grid-row: 1;
+}
+
+
+
+/* .footer {
+    grid-row: 5;
+} */

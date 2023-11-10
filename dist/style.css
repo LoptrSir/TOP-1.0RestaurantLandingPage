@@ -3,24 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* .body {
+    height:100vh;
+} */
+
 .content {
-    height: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 5% repeat(3, 30%) 5%;
-    grid-template-columns: repeat(3, 33%);
-
+    grid-template-rows: 15vh repeat(3, 25vh) 5vh;
+    grid-template-columns: repeat(3, 30vh);
+    background-image: url('./images/tacosSign1.jpeg');
+    color: aliceblue;
+    background-size: contain;
+    /* Ensure the image maintains its aspect ratio */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center center;
+    /* Center the image both horizontally and vertically */
+    background-color: black;
 }
 
-.header{
-grid-row: 1;
+.header {
+    grid-row: 1;
 }
 
-.greeting{
+.greeting {
     display: flex;
     flex-direction: column;
-    grid-row: 2/4;
-    grid-column: 1/3;
-    background-image: url('./images/tacosSign.jpeg');
+    grid-row: 2/5;
+    grid-column: 1/4;
 }
 
 

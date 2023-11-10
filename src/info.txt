@@ -1,5 +1,6 @@
 Restaurant Landing Page project for The Odin Project
 
+11/10 1441 Commit: background images finished, menu/contact export function created and content generated and working. 
 11/9 1500 commit: working on styling. Home/Menu: background images worked out. 
 1118 commit: having src/home/index.html, script.js would not play with webpack. migrated out of home things now work in npm start.
 11/8 1513 Commit: module now creates header div and home/menu/contact links. They all function in live-server.  webpack has an issue with dist. dist/home/index.html and dist/index.html exist. dist.index.html has the proper bundle.js data built in, this needs to be in the home file.

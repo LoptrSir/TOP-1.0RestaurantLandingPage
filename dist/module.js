@@ -40,3 +40,18 @@ export const imagePaths = [
 'src/images/tacoPlate.jpg',
 'src/images/tacoPlate2.jpg',
 ];
+
+export function createContactItem(phone, address, email) {
+    const contactContainer = document.createElement('div');
+    contactContainer.classList.add('contact-container');
+
+    const phoneItem = createContactItem('Phone: ', phone || '');
+    const addressItem = createContactItem('Address: ', address || '');
+    const emailItem = createContactItem('Website: ', email || '');
+
+    contactContainer.appendChild(phoneItem);
+    contactContainer.appendChild(addressItem);
+    contactContainer.appendChild(emailItem);
+
+    return contactContainer;
+}

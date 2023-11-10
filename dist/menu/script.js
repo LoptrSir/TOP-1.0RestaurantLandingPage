@@ -1,7 +1,8 @@
 import {myFooter, createTabs} from '../module.js';
 
 const headerDiv = createTabs();
-document.body.insertBefore(headerDiv, document.body.firstChild);
+const contentDiv = document.querySelector('.content');
+contentDiv.insertBefore(headerDiv, contentDiv.firstElementChild);
 
 const footer = myFooter();
 document.body.appendChild(footer);

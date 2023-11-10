@@ -1,13 +1,32 @@
-/* @import "normalize.css"; */
-
-.footer {
-    background-color: #333;
-    font-size: 0.6rem;
-    color: #f8afe5;
-    /* Text color */
-    padding: 3px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+
+.content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15vh repeat(3, 25vh) 5vh;
+    grid-template-columns: repeat(3, 30vh);
+    background-image: url('../images/tacocat.jpg');
+    color: aliceblue;
+    background-size: contain;
+    /* Ensure the image maintains its aspect ratio */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-position: center center;
+    /* Center the image both horizontally and vertically */
+    background-color: black;
+}
+
+.header {
+    grid-row: 1;
+}
+
+
+
+/* .footer {
+    grid-row: 5;
+} */
