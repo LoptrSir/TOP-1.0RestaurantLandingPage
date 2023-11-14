@@ -11,6 +11,7 @@ module.exports = {
   },
   devServer: {
     static: "./dist",
+    hot: true,
     historyApiFallback: true,
     // publicPath: '/',
   },
@@ -41,8 +42,7 @@ module.exports = {
           from: "src/contact",
           to: "contact",
         },
-        { from: "src/images", 
-        to: "images" },
+        { from: "src/images", to: "images" },
         {
           from: "src/style.css",
           to: "style.css",
@@ -54,6 +54,10 @@ module.exports = {
         {
           from: "src/script.js",
           to: "script.js",
+        },
+        {
+          from: "src/fonts",
+          to: "fonts",
         },
       ],
     }),
@@ -72,6 +76,18 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+        // use: [
+        //   {
+        //     loader: "file-loader",
+        //     options: {
+        //     name: "[name].[ext]",
+        //     }
+        //   },
+        // ],
       },
     ],
   },

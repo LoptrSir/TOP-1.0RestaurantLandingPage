@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/* @font-face {
+    font-family: 'MyFont';
+    src: url('./fonts/Eltaco.otf') format('ttf'),
+        url('./fonts/Eltaco.otf') format('ttf');
+    font-weight: 600;
+    font-style: italic;
+} */
+
 /* .body {
     height:100vh;
 } */
@@ -11,7 +19,7 @@
 .content {
     height: 100vh;
     display: grid;
-    grid-template-rows: 15vh repeat(3, 25vh) 5vh;
+    grid-template-rows: 8vh repeat(3, 25vh) 5vh;
     grid-template-columns: repeat(3, 30vh);
     background-image: url('./images/tacosSign1.jpeg');
     color: aliceblue;
@@ -26,17 +34,32 @@
 
 .header {
     grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tab {
+    color: aliceblue;
+    text-decoration: none;
+    margin-right: .15em;
+    border: solid 1px rgb(228, 169, 223);
+    padding: .5em;
+
+}
+
+.tab.active {
+    background-color: rgb(63, 63, 63, .7);
+    border: solid 2px rgb(70, 70, 199);
+    color: rgb(155, 207, 207);
 }
 
 .greeting {
     display: flex;
     flex-direction: column;
-    grid-row: 2/5;
-    grid-column: 1/4;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    align-items: center;
+    justify-content: center;
+    font-family: MyFont;
 }
-
-
-
-/* .footer {
-    grid-row: 5;
-} */

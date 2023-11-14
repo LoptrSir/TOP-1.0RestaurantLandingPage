@@ -13,6 +13,8 @@ export const myFooter = () => {
 };
 
 export function createTabs() {
+  let activeTabIndex = 0;
+
   const tabsData = [
     { name: "Home", url: "../index.html" }, // live-server mod './<folders>.html'
     { name: "Menu", url: "../menu/index.html" },
@@ -22,13 +24,47 @@ export function createTabs() {
   const headerDiv = document.createElement("div");
   headerDiv.className = "header";
 
-  tabsData.forEach((tabInfo) => {
+  function setActiveTab(index) {
+    const previousActiveTab = document.querySelector(".tab.active");
+    if (previousActiveTab) {
+      previousActiveTab.classList.remove("active");
+    }
+    const clickedTab = document.querySelector(`.tab:nth-child(${index + 1})`);
+    if (clickedTab) {
+      clickedTab.classList.add("active");
+    }
+    activeTabIndex = index;
+    console.log('setActiveTab', index);
+  }
+
+  headerDiv.addEventListener('click', function (event) {
+    const clickedTab = event.target.closest('.tab');
+    if (clickedTab) {
+      const index = Array.from(clickedTab.parentNode.children).indexOf(clickedTab);
+      setActiveTab(index);
+      console.log('ModuleListener', index);
+    }
+  });
+
+  tabsData.forEach((tabInfo, index) => {
     const tab = document.createElement("a");
-    tab.classList.add('tab')
+    tab.classList.add("tab");
+
+    if (index === activeTabIndex) {
+      tab.classList.add("active");
+    }
+
     tab.textContent = tabInfo.name;
     tab.href = tabInfo.url;
+
+tab.addEventListener("click", () => {
+  setActiveTab(index);
+  console.log("setActiveTab", index);
+});
+
     headerDiv.appendChild(tab);
   });
+  console.log('export', activeTabIndex );
   return headerDiv;
 }
 

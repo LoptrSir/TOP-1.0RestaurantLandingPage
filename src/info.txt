@@ -1,5 +1,6 @@
 Restaurant Landing Page project for The Odin Project
 
+11/14 1307 Commit: working to get tab emphasis to change based on the webpage being displayed.
 11/10 1441 Commit: background images finished, menu/contact export function created and content generated and working. 
 11/9 1500 commit: working on styling. Home/Menu: background images worked out. 
 1118 commit: having src/home/index.html, script.js would not play with webpack. migrated out of home things now work in npm start.
