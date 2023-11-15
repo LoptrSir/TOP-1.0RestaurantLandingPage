@@ -1,6 +1,7 @@
 Restaurant Landing Page project for The Odin Project
 
-11/15 0938 Commit: here is a source code that manages the .tab.active: https://github.com/michalosman/restaurant-page/blob/main/src/website.js look at website.js. This site is simple and well designed. Code is clean and simple.
+11/15 1006 Commit: the site referenced in last commit. Look at webpack.config, why so simple. Look at src vs dist files. There is a lot to learn about webpack here.
+0938 Commit: here is a source code that manages the .tab.active: https://github.com/michalosman/restaurant-page/blob/main/src/website.js look at website.js. This site is simple and well designed. Code is clean and simple.
 0928 Commit: moving on.  Need to figure out the issue with webpack HMR refresh causing .tab.active to go away. Also need to address inability to get specific fonts to work, is this a Linux pathway issue?
 1307 Commit: working to get tab emphasis to change based on the webpage being displayed.
 11/10 1441 Commit: background images finished, menu/contact export function created and content generated and working. 
