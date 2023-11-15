@@ -8,6 +8,8 @@ module.exports = {
     home: "./src/home.js",
     menu: "./src/menu.js",
     contact: "./src/contact.js",
+    // module: ["./src/module.js", "webpack/hot/dev-server"],
+    // module was attempted due to webpack HotModuleReplacement HMR causing reload.  This didn't fix it.
   },
   devServer: {
     static: "./dist",

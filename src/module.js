@@ -12,8 +12,15 @@ export const myFooter = () => {
   return footer;
 };
 
-export function createTabs() {
+export function createTabs(currentPageUrl) {
+  // export function createTabs() {
   let activeTabIndex = 0;
+
+  const storedIndex = localStorage.getItem("activeTabIndex");
+  if (storedIndex !== null) {
+    activeTabIndex = parseInt(storedIndex, 10);
+  }
+  //attempt to work around webpack HMR nerfing .tab.active.
 
   const tabsData = [
     { name: "Home", url: "../index.html" }, // live-server mod './<folders>.html'
@@ -25,24 +32,37 @@ export function createTabs() {
   headerDiv.className = "header";
 
   function setActiveTab(index) {
+    // debugger;
     const previousActiveTab = document.querySelector(".tab.active");
     if (previousActiveTab) {
       previousActiveTab.classList.remove("active");
     }
+
+   // Retrieve the stored index from local storage
+   const storedIndex = localStorage.getItem("activeTabIndex");
+   if (storedIndex !== null) {
+     activeTabIndex = parseInt(storedIndex, 10);
+   } else {
+     activeTabIndex = index;
+   }
+    // placed in an attempt to prevent weback hotloader (HMR) from refreshing page and losing .tab.active status.
+
     const clickedTab = document.querySelector(`.tab:nth-child(${index + 1})`);
     if (clickedTab) {
       clickedTab.classList.add("active");
     }
     activeTabIndex = index;
-    console.log('setActiveTab', index);
+    console.log("setActiveTab", index);
   }
 
-  headerDiv.addEventListener('click', function (event) {
-    const clickedTab = event.target.closest('.tab');
+  headerDiv.addEventListener("click", function (event) {
+    const clickedTab = event.target.closest(".tab");
     if (clickedTab) {
-      const index = Array.from(clickedTab.parentNode.children).indexOf(clickedTab);
+      const index = Array.from(clickedTab.parentNode.children).indexOf(
+        clickedTab
+      );
       setActiveTab(index);
-      console.log('ModuleListener', index);
+      console.log("ModuleListener", index);
     }
   });
 
@@ -50,21 +70,25 @@ export function createTabs() {
     const tab = document.createElement("a");
     tab.classList.add("tab");
 
-    if (index === activeTabIndex) {
+    if (tabInfo.url === currentPageUrl) {
       tab.classList.add("active");
+      activeTabIndex = index;
     }
+    // if (index === activeTabIndex) {
+    //   tab.classList.add("active");
+    // }
 
     tab.textContent = tabInfo.name;
     tab.href = tabInfo.url;
 
-tab.addEventListener("click", () => {
-  setActiveTab(index);
-  console.log("setActiveTab", index);
-});
+    tab.addEventListener("click", () => {
+      setActiveTab(index);
+      console.log("setActiveTab", index);
+    });
 
     headerDiv.appendChild(tab);
   });
-  console.log('export', activeTabIndex );
+  console.log("export", activeTabIndex);
   return headerDiv;
 }
 

@@ -12,65 +12,8 @@ export const myFooter = () => {
   return footer;
 };
 
+export function createTabs(currentPageUrl) {
 // export function createTabs() {
-//   let activeTabIndex = 0;
-
-//   const tabsData = [
-//     { name: "Home", url: "../index.html" }, // live-server mod './<folders>.html'
-//     { name: "Menu", url: "../menu/index.html" },
-//     { name: "Contact", url: "../contact/index.html" },
-//   ];
-
-//   const headerDiv = document.createElement("div");
-//   headerDiv.className = "header";
-
-//   function setActiveTab(index) {
-//     const previousActiveTab = document.querySelector(".tab.active");
-//     if (previousActiveTab) {
-//       previousActiveTab.classList.remove("active");
-//     }
-//     const clickedTab = document.querySelector(`.tab:nth-child(${index + 1})`);
-//     if (clickedTab) {
-//       clickedTab.classList.add("active");
-//     }
-//     activeTabIndex = index;
-//     console.log("setActiveTab", index);
-//   }
-
-//   headerDiv.addEventListener("click", function (event) {
-//     const clickedTab = event.target.closest(".tab");
-//     if (clickedTab) {
-//       const index = Array.from(clickedTab.parentNode.children).indexOf(
-//         clickedTab
-//       );
-//       setActiveTab(index);
-//       console.log("ModuleListener", index);
-//     }
-//   });
-
-//   tabsData.forEach((tabInfo, index) => {
-//     const tab = document.createElement("a");
-//     tab.classList.add("tab");
-
-//     if (index === activeTabIndex) {
-//       tab.classList.add("active");
-//     }
-
-//     tab.textContent = tabInfo.name;
-//     tab.href = tabInfo.url;
-
-//     headerDiv.appendChild(tab);
-//   });
-//   console.log("export", activeTabIndex);
-
-//   return {
-//     createTabs: () => headerDiv,
-//     setActiveTab: setActiveTab,
-//     activeTabIndex: () => activeTabIndex,
-//   };
-// }
-
-export function createTabs() {
   let activeTabIndex = 0;
 
   const tabsData = [
@@ -83,6 +26,7 @@ export function createTabs() {
   headerDiv.className = "header";
 
   function setActiveTab(index) {
+    debugger;
     const previousActiveTab = document.querySelector(".tab.active");
     if (previousActiveTab) {
       previousActiveTab.classList.remove("active");
@@ -108,9 +52,13 @@ export function createTabs() {
     const tab = document.createElement("a");
     tab.classList.add("tab");
 
-    if (index === activeTabIndex) {
+    if (tabInfo.url === currentPageUrl) {
       tab.classList.add("active");
+      activeTabIndex = index;
     }
+    // if (index === activeTabIndex) {
+    //   tab.classList.add("active");
+    // }
 
     tab.textContent = tabInfo.name;
     tab.href = tabInfo.url;
